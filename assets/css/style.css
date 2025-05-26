@@ -165,7 +165,7 @@ h3{
 
 /* ICONE SETA */
 .icone-seta {
-    margin-right: 8px;
+    margin: 1px;
     /*VALOR PADRAO, ENCOLHE PROPORCIONALMENTE
     PARA CABER DENTRO DO ESPAÇO DISPONIVEL*/
     flex-shrink: 0;
@@ -201,6 +201,7 @@ h3{
 }
 
 .area-not-diversas-esporte figure figcaption {
+    /* QUALQUER ESPAÇO QUE SOBRAR E RETIRADO */
     flex: 1;
 }
 
@@ -218,11 +219,10 @@ h3{
     text-decoration: none;
 }
 
-/* #link-noticia a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-} */
+#link-noticia a h4{
+    margin: 5px;
+    padding: 3px;
+}
 
 .area-not-diversas-esporte a {
     text-decoration: none;

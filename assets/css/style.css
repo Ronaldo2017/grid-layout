@@ -15,6 +15,9 @@ header {
     top: 0;
     display: flex;
     align-items: center;
+    /*justify-content: space-between;*/
+    vertical-align: middle;
+    height: 72px;
     justify-content: space-between;
     height: 69px;
     width: 100%;
@@ -22,6 +25,23 @@ header {
     /* AQUI O ELEMENTO SE COMPORTA COMO SE FOSSE UM ELEMENTO RELATIVE
     ATE ATINGIE UM PONTO DE ROLAGEM E SE COMPORTA COMO FIXED */
     position: sticky;
+}
+
+/* Formatação do campo de busca */
+label {
+    cursor: default;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0px, 0px, 0px, 0px);
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-width: 0px;
 }
 
 /* LOGO */
@@ -49,18 +69,17 @@ ul#menu li {
 
 /* CIRCULO  DE AO VIVO*/
 ul#menu li span.circle {
-    width: 0.1px;
-    height: 0.1px;
     /* TAMANHO DO CIRCULO */
     padding: 0.2rem;
     font-size: 0.1rem;
-    background: red;
-    border-radius: 50%;
-    animation: pulse 1.2s infinite;
-    margin: 0.2px;
+    background-color: rgb(220 38 38);
+    border-radius: 9999px;
+    animation: pulse 1s infinite;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-/* ANIMAÇÃO DO ICONE QUE ESTA SENDO APRESENTADO AO VIVO */
+/*ANIMAÇÃO DO ICONE QUE ESTA SENDO APRESENTADO AO VIVO */
 @keyframes pulse {
     0% {
         opacity: 1;
@@ -164,7 +183,8 @@ ul#menu li a:link{
     color: black;
 }
 
-h3{
+
+h3 {
     text-align: justify;
 }
 
@@ -231,7 +251,7 @@ FOI UTILIZADO SOMENTE FLEX*/
     text-decoration: none;
 }
 
-#link-noticia a h4{
+#link-noticia a h4 {
     margin: 5px;
     padding: 3px;
 }

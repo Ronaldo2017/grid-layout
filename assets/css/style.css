@@ -18,8 +18,12 @@ header {
     /*justify-content: space-between;*/
     vertical-align: middle;
     height: 72px;
+    justify-content: space-between;
+    height: 69px;
     width: 100%;
     background: black;
+    /* AQUI O ELEMENTO SE COMPORTA COMO SE FOSSE UM ELEMENTO RELATIVE
+    ATE ATINGIE UM PONTO DE ROLAGEM E SE COMPORTA COMO FIXED */
     position: sticky;
 }
 
@@ -63,7 +67,7 @@ ul#menu li {
 }
 
 
-/* CIRCULO */
+/* CIRCULO  DE AO VIVO*/
 ul#menu li span.circle {
     /* TAMANHO DO CIRCULO */
     padding: 0.2rem;
@@ -101,6 +105,10 @@ ul#menu li a:hover {
     padding: 20px;
 }
 
+ul#menu li a:link{
+    visibility: visible;
+}
+
 /* CAMPO DE BUSCA */
 /* .search {
     border-radius: 13px;
@@ -114,11 +122,13 @@ ul#menu li a:hover {
     grid-template-areas:
         "link-noticia galery"
         "not-diversas galery";
+        /* 2 COLUNAS  */
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     margin-top: 20px;
 }
 
+/* NOTICIAS PAGINA PRINCIPAL */
 .area-link-noticia {
     grid-area: link-noticia;
     margin-left: 20px;
@@ -134,6 +144,13 @@ ul#menu li a:hover {
     display: flex;
 }
 
+.area-not-diversas img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* NOTICIAS AREA LATERAL */
 .area-galery {
     grid-area: galery;
     display: flex;
@@ -147,12 +164,8 @@ ul#menu li a:hover {
     border-radius: 8px;
 }
 
-.area-not-diversas img {
-    width: 250px;
-    height: auto;
-    border-radius: 8px;
-}
 
+/* ESTILO DOS LINKS */
 #link-noticia,
 #rel_principal a {
     list-style: none;
@@ -196,7 +209,8 @@ h3 {
 
 /* ************** ESPORTE ************** */
 
-/* DIV ENGLOBA TODO O CONTEUDO COM AS IMGS */
+/* DIV ENGLOBA TODO O CONTEUDO COM AS IMGS 
+FOI UTILIZADO SOMENTE FLEX*/
 .area-not-diversas-esporte {
     display: flex;
     gap: 10px;
@@ -272,7 +286,7 @@ h3 {
     margin-bottom: 0;
 }
 
-/* AUTOR */
+/* AUTOR DA MATERIA*/
 .area-link-psg h6 {
     padding: 5px 30px;
     margin: 0;
@@ -325,6 +339,7 @@ hr {
     margin-left: 30px;
 }
 
+/* TEXTO CAMPEAO */
 .campeonato {
     font-weight: bold;
     color: #c00;
@@ -340,24 +355,6 @@ hr {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ******** RODAPE******************* */
 #rodape {
     background-color: black;
@@ -368,6 +365,7 @@ hr {
 #mais {
     display: grid;
     grid-template-areas: "logo politica nacional economia";
+    /* 4 COLUNAS */
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin: 0 auto;

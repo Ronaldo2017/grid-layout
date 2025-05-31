@@ -1,3 +1,4 @@
+/* AUTOR => RONALDO */
 body {
     margin: 0;
     padding: 0;
@@ -15,6 +16,8 @@ header {
     top: 0;
     display: flex;
     align-items: center;
+    /*justify-content: space-between;*/
+    vertical-align: middle;
     justify-content: space-between;
     height: 69px;
     width: 100%;
@@ -24,12 +27,33 @@ header {
     position: sticky;
 }
 
+/* Formatação do campo de busca */
+label {
+    cursor: default;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0px, 0px, 0px, 0px);
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-width: 0px;
+}
+
+/*===========================================================*/
+
 /* LOGO */
 .menu_logo {
     width: 72px;
     margin-left: 50px;
     padding: 10px;
 }
+
+/*===========================================================*/
 
 /* MENU */
 nav ul {
@@ -49,18 +73,17 @@ ul#menu li {
 
 /* CIRCULO  DE AO VIVO*/
 ul#menu li span.circle {
-    width: 0.1px;
-    height: 0.1px;
     /* TAMANHO DO CIRCULO */
     padding: 0.2rem;
     font-size: 0.1rem;
-    background: red;
-    border-radius: 50%;
-    animation: pulse 1.2s infinite;
-    margin: 0.2px;
+    background-color: rgb(220 38 38);
+    border-radius: 9999px;
+    animation: pulse 1s infinite;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-/* ANIMAÇÃO DO ICONE QUE ESTA SENDO APRESENTADO AO VIVO */
+/*ANIMAÇÃO DO ICONE QUE ESTA SENDO APRESENTADO AO VIVO */
 @keyframes pulse {
     0% {
         opacity: 1;
@@ -75,20 +98,19 @@ ul#menu li span.circle {
     }
 }
 
-ul#menu li a {
+ul#menu li a,
+ul#menu li a:link {
     text-decoration: none;
     font-size: 0.8rem;
     color: white;
+    visibility: visible;
 }
 
 ul#menu li a:hover {
     border-bottom: 3px solid red;
     padding: 20px;
 }
-
-ul#menu li a:link{
-    visibility: visible;
-}
+/* FIM MENU */
 
 /* CAMPO DE BUSCA */
 /* .search {
@@ -126,10 +148,15 @@ ul#menu li a:link{
 }
 
 .area-not-diversas img {
+    /* max-width: 100%; */
     width: 250px;
     height: auto;
     border-radius: 8px;
 }
+
+/* FIM NOTICIAS PAGINA PRINCIPAL */
+
+/*===========================================================*/
 
 /* NOTICIAS AREA LATERAL */
 .area-galery {
@@ -145,8 +172,9 @@ ul#menu li a:link{
     border-radius: 8px;
 }
 
+/*===========================================================*/
 
-/* ESTILO DOS LINKS */
+/* ESTILO DOS LINKS DAS NOTICIAS DA PAGINA PRINCIPAL */
 #link-noticia,
 #rel_principal a {
     list-style: none;
@@ -154,25 +182,53 @@ ul#menu li a:link{
     text-decoration: none;
 }
 
+#rel_principal{
+    margin-left: -40px;
+}
+
+#rel_principal li{
+    list-style: none;
+}
+
+#rel_principal a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#rel_principal a h4 {
+    margin: 5px;
+    padding: 3px;
+}
+
+/* #link-noticia a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+} */
+
+/*===========================================================*/
+
+/* LINKS DE NOTICIAS DIVERSAS  */
+
+/* LINKS DE NOTICIAS PRINCIPAIS */
 .area-not-diversas a {
     text-decoration: none;
     color: black;
 }
 
+/* LINKS DAS NOTICIAS NA AREA LATERAL */
 .area-galery a {
     text-decoration: none;
     color: black;
 }
 
-h3{
+/* TEXTOS DOS LINKS */
+h3 {
     text-align: justify;
 }
 
-#link-noticia a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
+
 
 /* ICONE SETA */
 .icone-seta {
@@ -222,6 +278,8 @@ FOI UTILIZADO SOMENTE FLEX*/
     font-size: 1rem;
 }
 
+/*===========================================================*/
+
 /* ******** LINKS ********* */
 
 #link-esporte,
@@ -231,7 +289,7 @@ FOI UTILIZADO SOMENTE FLEX*/
     text-decoration: none;
 }
 
-#link-noticia a h4{
+#link-noticia a h4 {
     margin: 5px;
     padding: 3px;
 }
@@ -240,6 +298,8 @@ FOI UTILIZADO SOMENTE FLEX*/
     text-decoration: none;
     color: black;
 }
+
+/*===========================================================*/
 
 /* DESTAQUE DO ESPORTE */
 #word {
@@ -275,7 +335,7 @@ FOI UTILIZADO SOMENTE FLEX*/
 
 /* TITULOS */
 .area-link-psg h1,
-h4 {
+.area-link-psg h4 {
     margin-left: 30px;
     margin-bottom: 0;
 }
@@ -302,7 +362,7 @@ h4 {
     display: block;
 }
 
-
+/*===========================================================*/
 
 /* TEXTO SOBRE O CAMPEAO */
 #campeao {

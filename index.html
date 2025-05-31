@@ -22,8 +22,12 @@
         <!-- MENU -->
         <nav>
             <ul id="menu">
-                <li><a href="detalhes.html"><span class="circle"></span></a></li>
-                <li><a href="detalhes.html">Ao vivo</a></li>
+                <li>
+                    <a href="detalhes.html" class="">
+                        <span class="circle"></span>
+                        Ao vivo
+                    </a>
+                </li>
                 <li><a href="detalhes.html">Política</a></li>
                 <li><a href="detalhes.html">WW</a></li>
                 <li><a href="detalhes.html">Economia</a></li>
@@ -31,8 +35,23 @@
                 <li><a href="detalhes.html">Pop</a></li>
                 <li><a href="detalhes.html">Viagem & Gastronomia</a></li>
             </ul>
-        </nav>
+        </nav> <!-- FIM MENU -->
+
         <!-- Campo de busca -->
+        <form action="/" tabindex="1">
+            <label for="search" class="sr-only">Buscar</label>
+            <input required placeholder="Buscar" type="search" name="search" id="search">
+            <button type="submit">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" heigth="1em"
+                    width="1em">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                    </path>
+                </svg>
+            </button>
+        </form>
+
         <!-- <div class="pesquisar">
             <input type="text" placeholder="Pesquisar..." class="search">
         </div> -->
@@ -43,13 +62,18 @@
             <section id="noticia_principal">
                 <div class="grid-noticia-principal">
                     <div class="area-link-noticia">
+                        <!-- LINKS DAS NOTICIAS PRINCIPAIS -->
                         <ul id="link-noticia">
+                            <!-- NOTICIA PRINCIPAL -->
                             <li>
                                 <a href="detalhes.html">
                                     <h1>China e Brasil concordam com proposta de Putin sobre Ucrânia em declaração</h1>
                                 </a>
                             </li>
-                            <aside id="rel_principal">
+                        </ul>
+                        <!-- NOTICIAS REFERENTES A PRINCIPAL -->
+                        <aside id="rel_principal">
+                            <ul>
                                 <li>
                                     <a href="detalhes.html">
                                         <svg class="icone-seta" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -95,13 +119,14 @@
                                         <h4>José Márcio Camargo: alta do IOF é 1º passo para fechar conta de capital
                                         </h4>
                                     </a></li>
-                            </aside>
-                        </ul>
+                            </ul>
+                        </aside>
                     </div>
 
+                    <!-- NOTICIAS CENTRAIS DA PAGINA -->
                     <div class="area-not-diversas">
                         <figure class="ibama">
-                            <a href="detalhes.html"><img src="assets/img/noticia_ibama.webp" alt="Ibama"></a>
+                            <a href="detalhes.html"><img src="assets/img/noticia_ibama.webp" alt="Imagem de notícia sobre o Ibama"></a>
                             <figcaption>
                                 <a href="detalhes.html">
                                     <h3>Chefia e técnicos do Ibama racham sobre resgate animal na Foz do Amazonas</h3>
@@ -137,11 +162,11 @@
                     <div class="area-galery">
                         <article>
                             <figure id="live">
-                                <a href="detalhes.html"><img src="assets/img/live_cnn.png" alt="Live CNN"></a>
+                                <a href="detalhes.html"><img src="assets/img/live_cnn.png" alt="Live CNN - transmissão ao vivo"></a>
                                 <figcaption>
                                     <a href="detalhes.html">
-                                    <h3>LIVE CNN - Assista à programação ao vivo da CNN Brasil</h3>
-                               </a>
+                                        <h3>LIVE CNN - Assista à programação ao vivo da CNN Brasil</h3>
+                                    </a>
                                 </figcaption>
                             </figure>
                             <figure id="dep">
@@ -149,8 +174,9 @@
                                         alt="Deputados"></a>
                                 <figcaption>
                                     <a href="detalhes.html">
-                                    <h3>Deputado discursa na tribuna da Câmara com bebê reborn no colo: “Não é pecado"
-                                    </h3>
+                                        <h3>Deputado discursa na tribuna da Câmara com bebê reborn no colo: “Não é
+                                            pecado"
+                                        </h3>
                                     </a>
                                 </figcaption>
                             </figure>
@@ -158,7 +184,7 @@
                     </div>
                 </div>
             </section>
-
+            <hr>
             <!-- *********** ESPORTE *************** -->
 
             <div class="esporte">
@@ -225,6 +251,7 @@
 
         </main><!--FIM MAIN-->
 
+        <!-- RODAPE -->
         <div id="rodape">
             <footer>
                 <nav id="mais">
